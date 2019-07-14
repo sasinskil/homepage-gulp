@@ -422,6 +422,10 @@ body {
   margin-bottom: 40px;
   max-width: 300px;
   max-height: 300px; }
+  .section:hover {
+    background: #c6e6e3;
+    border-radius: 20px;
+    font-style: italic; }
   .section__header {
     color: #367e96;
     font-size: 20px;
