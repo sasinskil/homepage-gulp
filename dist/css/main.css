@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:700&display=swap&subset=latin-ext");
 html {
   line-height: 1.15;
   /* 1 */
@@ -316,7 +317,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #FFDEE9;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FFDEE9), to(#B5FFFC));
   background-image: -webkit-linear-gradient(bottom, #FFDEE9 0%, #B5FFFC 100%);
@@ -383,6 +384,7 @@ body {
   padding-top: 50px; }
   .main__header {
     color: #697268;
+    font-family: 'Roboto Slab', serif;
     font-size: 40px;
     margin-bottom: 60px; }
 
@@ -410,6 +412,7 @@ body {
   clear: both; }
   .diary__header {
     color: #5B85AA;
+    font-family: 'Roboto Slab', serif;
     font-size: 30px;
     padding: 50px 0;
     text-align: center; }
@@ -472,10 +475,11 @@ body {
   font-weight: bold;
   max-width: 700px; }
 
-.footer--main-page {
+.footer {
+  font-size: 12px;
+  padding: 10px;
   width: 100%;
   color: #fff;
-  padding: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,33 +487,20 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background: #87CBAC; }
-
-.footer:not(.footer--main-page) {
-  width: 100%;
-  color: #fff;
-  padding: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #87CBAC;
-  position: fixed;
-  bottom: 0; }
-
-.footer__link {
-  color: lightcoral;
-  text-decoration: none; }
-
-.footer__link--top {
-  position: fixed;
-  bottom: 60px;
-  right: 10px;
-  text-decoration: none;
-  color: lightcoral;
-  border-right: 2px solid lightcoral;
-  padding: 5px; }
+  .footer:not(.footer--main-page) {
+    position: fixed;
+    bottom: 0; }
+  .footer__link {
+    color: lightcoral;
+    text-decoration: none; }
+  .footer__link--top {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    text-decoration: none;
+    color: lightcoral;
+    border-right: 2px solid lightcoral;
+    padding: 5px; }
 
 .flex {
   display: -webkit-box;

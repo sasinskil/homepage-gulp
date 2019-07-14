@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:700&display=swap&subset=latin-ext');
 
 html {
   box-sizing: border-box;
@@ -10,7 +11,8 @@ html {
 }
 
 body {
-  font-family: $fontFamily;
+  // font-family: $fontFamily;
+  font-family: 'Montserrat', sans-serif;
   background-color: $bodyBackgroundColor;
   background-image: $bodyBackgroundLinear;
   min-height: 100vh;
@@ -82,6 +84,7 @@ body {
 
   &__header {
     color: #697268;
+    font-family: 'Roboto Slab', serif;
     font-size: 40px;
     margin-bottom: 60px;
   }
@@ -119,6 +122,7 @@ body {
 
   &__header {
     color: #5B85AA;
+    font-family: 'Roboto Slab', serif;
     font-size: 30px;
     padding: 50px 0;
     text-align: center;
@@ -198,23 +202,15 @@ body {
 }
 
 .footer {
-  
-  &--main-page {
+    font-size: 12px;
+    padding: 10px;
     width: 100%;
     color: $white;
-    padding: 16px;
     display: flex;
     justify-content: center;
     background: $navigationBackground;
-  }
 
   &:not(.footer--main-page) {
-    width: 100%;
-    color: $white;
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    background: $navigationBackground;
     position: fixed;
     bottom: 0;
   }
