@@ -12,4 +12,4 @@ Zapraszam, zobacz na żywo: [Łukasz homepage](https://sasinskil.github.io/homep
 
 `gulp`
 
-Aby opublikować stronę za pomocą github pages użyj `npm run deploy`
+Aby ***opublikować*** stronę za pomocą github pages użyj `npm run deploy`
