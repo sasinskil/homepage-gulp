@@ -1,4 +1,10 @@
-# homepage-gulp starter
+![Homepage screenshot](github/homepage-gulp.png)
+
+# Moja strona domowa
+
+Zapraszam, zobacz na żywo: [Łukasz homepage](https://sasinskil.github.io/homepage-gulp)
+
+## Co zrobić aby uruchomić stronę lokalnie ?
 
 `npm install -g gulp-cli`
 
@@ -6,4 +12,4 @@
 
 `gulp`
 
-To publish your page using github pages use `npm run deploy`
+Aby opublikować stronę za pomocą github pages użyj `npm run deploy`
