@@ -135,6 +135,12 @@ body {
   max-width: 300px;
   max-height: 300px;
 
+  &:hover {
+    background: rgb(198, 230, 227);
+    border-radius: 20px;
+    font-style: italic;
+  }
+
   &__header {
     color: rgb(54, 126, 150);
     font-size: 20px;
