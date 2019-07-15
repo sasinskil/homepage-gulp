@@ -1,19 +1,21 @@
 @import "_normalize";
 @import "_variables";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:700&display=swap&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:700&display=swap&subset=latin-ext");
 
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   // font-family: $fontFamily;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: $bodyBackgroundColor;
   background-image: $bodyBackgroundLinear;
   min-height: 100vh;
@@ -31,14 +33,13 @@ body {
 }
 
 .navigation {
-
   &__list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-  
+
     &--article {
       list-style: none;
       padding: 0;
@@ -60,7 +61,7 @@ body {
     color: $white;
     padding-bottom: 5px;
     text-decoration: none;
-  
+
     &:hover {
       border-bottom: 2px solid $white;
     }
@@ -85,7 +86,7 @@ body {
 
   &__header {
     color: #697268;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-size: 40px;
     margin-bottom: 60px;
   }
@@ -96,7 +97,7 @@ body {
   position: relative;
 
   &__header {
-    color: #5B85AA;
+    color: #5b85aa;
     font-size: 30px;
   }
 
@@ -122,8 +123,8 @@ body {
   clear: both;
 
   &__header {
-    color: #5B85AA;
-    font-family: 'Roboto Slab', serif;
+    color: #5b85aa;
+    font-family: "Roboto Slab", serif;
     font-size: 30px;
     padding: 50px 0;
     text-align: center;
@@ -146,7 +147,7 @@ body {
     color: rgb(54, 126, 150);
     font-size: 20px;
     margin-bottom: 16px;
-    position: relative; 
+    position: relative;
   }
 
   &__header::before {
@@ -177,18 +178,18 @@ body {
 }
 
 .contact {
-
   padding: 50px 0 80px 0;
 
   &__header {
     text-align: center;
     color: rgb(54, 126, 150);
     font-size: 30px;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin-bottom: 50px;
   }
 
   &__form {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -206,7 +207,6 @@ body {
       border: 2px solid rgb(54, 126, 150);
       background: none;
       padding: 10px;
-      
     }
 
     &--label-email {
@@ -222,7 +222,6 @@ body {
       border: 2px solid rgb(54, 126, 150);
       background: none;
       padding: 10px;
-
     }
 
     &--label-message {
@@ -243,7 +242,7 @@ body {
     &--button {
       margin-top: 20px;
       border: none;
-      background: #FFDEE9;
+      background: #ffdee9;
       width: 180px;
       height: 50px;
       border: 2px solid lightcoral;
@@ -273,7 +272,6 @@ body {
 }
 
 .article {
-
   &__header {
     color: $lightslategrey;
     font-size: 30px;
@@ -300,18 +298,18 @@ body {
   &__footer {
     font-style: italic;
     font-weight: bold;
-    max-width: 700px
+    max-width: 700px;
   }
 }
 
 .footer {
-    font-size: 12px;
-    padding: 10px;
-    width: 100%;
-    color: $white;
-    display: flex;
-    justify-content: center;
-    background: $navigationBackground;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  background: $navigationBackground;
 
   &:not(.footer--main-page) {
     position: fixed;
@@ -348,9 +346,7 @@ body {
 }
 
 @media screen and (max-width: $desktop) {
-
   .navigation {
-    
     &__button {
       display: block;
     }
@@ -375,36 +371,34 @@ body {
 
 @media screen and (max-width: $tablet) {
   .main {
-      padding: 16px;
+    padding: 16px;
   }
   .grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
   }
   .footer__link--top {
-      bottom: 90px;
+    bottom: 90px;
   }
 }
 
 @media screen and (max-width: $mobile) {
-
   .main__header {
-      text-align: center;
-      font-size: 30px;
+    text-align: center;
+    font-size: 30px;
   }
 
   .about {
-    
     &__header {
       text-align: center;
       font-size: 25px;
-  }
+    }
 
     &__picture {
-    float: none;
-    margin: 30px auto;
+      float: none;
+      margin: 30px auto;
+    }
   }
-}
 
   .diary {
     display: flex;
@@ -414,30 +408,58 @@ body {
 
     &__header {
       font-size: 20px;
+    }
   }
-}
 
   .section {
-
     &__header {
       font-size: 18px;
+    }
   }
-}
 
-  .article {
-
+  .contact {
     &__header {
       font-size: 25px;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+
+    &__form {
+      &--input-name {
+        margin-top: 5px;
+        width: 250px;
+      }
+
+      &--input-email {
+        margin-top: 5px;
+        width: 250px;
+      }
+
+      &--input-message {
+        margin-top: 5px;
+        width: 250px;
+      }
+
+      &--button {
+        margin-top: 10px;
+        width: 150px;
+      }
+    }
   }
-  
+
+  .article {
+    &__header {
+      font-size: 25px;
+    }
+
     &__picture {
       padding: 10px;
       max-width: 320px;
       display: block;
+    }
   }
-}
 
   .grid {
-      grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
