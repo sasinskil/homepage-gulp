@@ -310,14 +310,17 @@ template {
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  scroll-behavior: smooth; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #FFDEE9;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FFDEE9), to(#B5FFFC));
   background-image: -webkit-linear-gradient(bottom, #FFDEE9 0%, #B5FFFC 100%);
@@ -384,7 +387,7 @@ body {
   padding-top: 50px; }
   .main__header {
     color: #697268;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-size: 40px;
     margin-bottom: 60px; }
 
@@ -392,7 +395,7 @@ body {
   width: 100%;
   position: relative; }
   .about__header {
-    color: #5B85AA;
+    color: #5b85aa;
     font-size: 30px; }
   .about__picture {
     width: 100%;
@@ -411,8 +414,8 @@ body {
 .diary {
   clear: both; }
   .diary__header {
-    color: #5B85AA;
-    font-family: 'Roboto Slab', serif;
+    color: #5b85aa;
+    font-family: "Roboto Slab", serif;
     font-size: 30px;
     padding: 50px 0;
     text-align: center; }
@@ -454,6 +457,86 @@ body {
   .section__link {
     color: lightcoral;
     text-decoration: none; }
+
+.contact {
+  padding: 50px 0 80px 0; }
+  .contact__header {
+    text-align: center;
+    color: #367e96;
+    font-size: 30px;
+    padding: 20px 0;
+    margin-bottom: 50px; }
+  .contact__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .contact__form--label-name {
+      font-weight: bold;
+      color: #5092aa; }
+    .contact__form--input-name {
+      margin-top: 10px;
+      width: 300px;
+      height: 40px;
+      text-decoration: none;
+      border: 2px solid #367e96;
+      background: none;
+      padding: 10px; }
+    .contact__form--label-email {
+      font-weight: bold;
+      color: #5092aa; }
+    .contact__form--input-email {
+      margin-top: 10px;
+      width: 300px;
+      height: 40px;
+      text-decoration: none;
+      border: 2px solid #367e96;
+      background: none;
+      padding: 10px; }
+    .contact__form--label-message {
+      font-weight: bold;
+      color: #5092aa; }
+    .contact__form--input-message {
+      margin-top: 10px;
+      width: 300px;
+      height: 100px;
+      text-decoration: none;
+      border: 2px solid #367e96;
+      background: none;
+      padding: 10px; }
+    .contact__form--button {
+      margin-top: 20px;
+      border: none;
+      background: #ffdee9;
+      width: 180px;
+      height: 50px;
+      border: 2px solid lightcoral;
+      color: lightcoral;
+      font-weight: bold;
+      position: relative; }
+      .contact__form--button::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border: 2px solid lightcoral;
+        background: lightcoral;
+        display: inline-block;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        z-index: -1; }
+      .contact__form--button:hover {
+        color: white;
+        background: lightcoral; }
 
 .article__header {
   color: lightslategrey;
@@ -526,7 +609,7 @@ body {
   grid-column-gap: 90px;
   grid-row-gap: 45px; }
 
-@media screen and (max-width: 1112px) {
+@media screen and (max-width: 1320px) {
   .navigation__button {
     display: block; }
   .navigation__list {
@@ -587,6 +670,22 @@ body {
       font-size: 20px; }
   .section__header {
     font-size: 18px; }
+  .contact__header {
+    font-size: 25px;
+    padding: 0;
+    margin-bottom: 40px; }
+  .contact__form--input-name {
+    margin-top: 5px;
+    width: 250px; }
+  .contact__form--input-email {
+    margin-top: 5px;
+    width: 250px; }
+  .contact__form--input-message {
+    margin-top: 5px;
+    width: 250px; }
+  .contact__form--button {
+    margin-top: 10px;
+    width: 150px; }
   .article__header {
     font-size: 25px; }
   .article__picture {
