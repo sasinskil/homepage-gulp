@@ -37,3 +37,41 @@ button.addEventListener('click', (e) => {
     }
 });
 
+const inputName = document.querySelector('.contact__form--input-name-js');
+const inputEmail = document.querySelector('.contact__form--input-email-js');
+const inputContent = document.querySelector('.contact__form--input-message-js');
+
+const sendMessageBtn = document.querySelector('.contact__form--button-js');
+
+inputName.addEventListener('keyup', (e) => {
+    localStorage.setItem('messageName', e.target.value);
+})
+
+inputEmail.addEventListener('keyup', (e) => {
+    localStorage.setItem('messageEmail', e.target.value);
+})
+
+inputContent.addEventListener('keyup', (e) => {
+    localStorage.setItem('messageContent', e.target.value);
+})
+
+sendMessageBtn.addEventListener('click', (e) => {
+    // localStorage.removeItem('messageName');
+    // localStorage.removeItem('messageEmail');
+    // localStorage.removeItem('messageContent');
+    
+    localStorage.clear();
+})
+
+
+if(localStorage.getItem('messageName')) {
+    inputName.value = localStorage.getItem('messageName');
+}
+
+if(localStorage.getItem('messageEmail')) {
+    inputEmail.value = localStorage.getItem('messageEmail');
+}
+
+if(localStorage.getItem('messageContent')) {
+    inputContent.value = localStorage.getItem('messageContent');
+}
