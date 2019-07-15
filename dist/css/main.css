@@ -456,6 +456,85 @@ body {
     color: lightcoral;
     text-decoration: none; }
 
+.contact {
+  padding: 50px 0 80px 0; }
+  .contact__header {
+    text-align: center;
+    color: #367e96;
+    font-size: 30px;
+    padding: 10px 0; }
+  .contact__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .contact__form--label-name {
+      font-weight: bold;
+      color: #5092aa; }
+    .contact__form--input-name {
+      margin-top: 10px;
+      width: 300px;
+      height: 40px;
+      text-decoration: none;
+      border: 2px solid #367e96;
+      background: none;
+      padding: 10px; }
+    .contact__form--label-email {
+      font-weight: bold;
+      color: #5092aa; }
+    .contact__form--input-email {
+      margin-top: 10px;
+      width: 300px;
+      height: 40px;
+      text-decoration: none;
+      border: 2px solid #367e96;
+      background: none;
+      padding: 10px; }
+    .contact__form--label-message {
+      font-weight: bold;
+      color: #5092aa; }
+    .contact__form--input-message {
+      margin-top: 10px;
+      width: 300px;
+      height: 100px;
+      text-decoration: none;
+      border: 2px solid #367e96;
+      background: none;
+      padding: 10px; }
+    .contact__form--button {
+      margin-top: 20px;
+      border: none;
+      background: #FFDEE9;
+      width: 180px;
+      height: 50px;
+      border: 2px solid lightcoral;
+      color: lightcoral;
+      font-weight: bold;
+      position: relative; }
+      .contact__form--button::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border: 2px solid lightcoral;
+        background: lightcoral;
+        display: inline-block;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        z-index: -1; }
+      .contact__form--button:hover {
+        color: white;
+        background: lightcoral; }
+
 .article__header {
   color: lightslategrey;
   font-size: 30px;
