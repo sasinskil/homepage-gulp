@@ -606,7 +606,7 @@ body {
   grid-column-gap: 90px;
   grid-row-gap: 45px; }
 
-@media screen and (max-width: 1112px) {
+@media screen and (max-width: 1320px) {
   .navigation__button {
     display: block; }
   .navigation__list {
