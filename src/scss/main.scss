@@ -81,24 +81,23 @@ body {
 .main {
   width: 100%;
   max-width: 800px;
-  margin: 40px auto;
-  padding-top: 50px;
+  margin: 80px auto;
 
   &__header {
     color: #697268;
     font-family: "Roboto Slab", serif;
     font-size: 40px;
-    margin-bottom: 60px;
+    padding: 30px 0 50px 0;
   }
 }
 
 .about {
   width: 100%;
-  position: relative;
 
   &__header {
     color: #5b85aa;
     font-size: 30px;
+    padding: 50px 0;
   }
 
   &__picture {
@@ -136,11 +135,23 @@ body {
   margin-bottom: 40px;
   max-width: 300px;
   max-height: 300px;
+  position: relative;
 
-  &:hover {
-    background: rgb(198, 230, 227);
-    border-radius: 20px;
-    font-style: italic;
+  &::before {
+    content: "";
+    @include sectionHeaderBeforeShape;
+    margin-right: 10px;
+    background: $lightcoral;
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    left: -15px;
+    width: 0px;
+    transition: all 0.5s;
+  }
+
+  &:hover::before {
+    width: 20px;
   }
 
   &__header {
@@ -150,20 +161,10 @@ body {
     position: relative;
   }
 
-  &__header::before {
-    content: "";
-    @include sectionHeaderBeforeShape;
-    margin-right: 10px;
-    background: $lightcoral;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: -30px;
-  }
-
   &__paragraph {
     padding: 16px;
     line-height: 20px;
+    font-size: 14px;
     padding: 0;
     margin: 0;
     height: 100%;
