@@ -337,7 +337,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed; }
+  position: fixed;
+  z-index: 10; }
 
 .navigation-trigger {
   text-decoration: none;
@@ -385,5 +386,120 @@ body {
     position: fixed;
     top: 10px;
     right: 15px; }
+
+.person {
+  margin-top: 50px;
+  width: 100%;
+  height: 500px;
+  background: url("../assets/images/fog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #8f8a8a; }
+  .person__title {
+    padding-bottom: 40px; }
+  .person__citation {
+    padding-bottom: 80px; }
+  .person__button {
+    text-decoration: none;
+    padding: 12px 35px;
+    background: rgba(143, 138, 138, 0.4);
+    color: #fff;
+    border: 2px solid #fff; }
+
+.about {
+  position: relative;
+  height: 600px;
+  color: #8f8a8a; }
+  .about__title {
+    position: absolute;
+    top: 30px;
+    left: 45vw; }
+  .about__box {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .about__who, .about .who {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    width: 50vw;
+    background: lightgray; }
+    .about__who__title, .about .who__title {
+      font-size: 30px; }
+    .about__who__arrow, .about .who__arrow {
+      margin-top: 40px;
+      width: 40px;
+      height: 40px; }
+  .about__info, .about .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    width: 50vw;
+    background: rgba(211, 211, 211, 0.7); }
+    .about__info__image, .about .info__image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%; }
+    .about__info__paragraph, .about .info__paragraph {
+      color: #5c5555;
+      margin-top: 20px;
+      max-width: 400px; }
+    .about__info__link, .about .info__link {
+      padding-top: 20px;
+      text-decoration: none;
+      color: #494545;
+      font-weight: bold; }
+      .about__info__link:hover, .about .info__link:hover {
+        color: #fff; }
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 90px;
+  grid-row-gap: 40px; }
 
 /*# sourceMappingURL=main.css.map */
