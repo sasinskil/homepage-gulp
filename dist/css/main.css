@@ -323,4 +323,67 @@ body {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh; }
 
+.main-header {
+  width: 100%;
+  top: 0;
+  padding: 16px;
+  background: #8f8a8a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed; }
+
+.navigation-trigger {
+  text-decoration: none;
+  color: #fff; }
+
+.navigation {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  top: 0;
+  right: 0;
+  background: #8f8a8a;
+  width: 300px;
+  min-height: 100vh; }
+  .navigation__list {
+    margin: 55px 0 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    list-style: none; }
+  .navigation__item {
+    margin-bottom: 25px; }
+  .navigation__link {
+    text-decoration: none;
+    color: #fff; }
+    .navigation__link:hover {
+      color: #ccc5c5; }
+  .navigation-hide {
+    text-decoration: none;
+    color: #fff;
+    position: fixed;
+    top: 10px;
+    right: 15px; }
+
 /*# sourceMappingURL=main.css.map */
