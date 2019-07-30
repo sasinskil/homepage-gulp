@@ -490,16 +490,50 @@ body {
           align-items: center;
   color: #8f8a8a; }
   .person__title {
-    padding-bottom: 40px; }
+    padding-bottom: 50px; }
   .person__citation {
-    padding-bottom: 80px; }
+    padding-bottom: 90px; }
   .person__button {
     text-decoration: none;
     padding: 12px 35px;
-    background: rgba(143, 138, 138, 0.4);
+    background: none;
     color: #fff;
     border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff; }
+    border-right: 2px solid #fff;
+    position: relative;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s; }
+    .person__button:hover {
+      background: rgba(143, 138, 138, 0.4); }
+    .person__button::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #fff;
+      -webkit-transition: width 0.6s;
+      -o-transition: width 0.6s;
+      transition: width 0.6s; }
+    .person__button:hover::before {
+      width: 100%; }
+    .person__button::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 0%;
+      background: #fff;
+      -webkit-transition: height 0.6s;
+      -o-transition: height 0.6s;
+      transition: height 0.6s; }
+    .person__button:hover::after {
+      height: 100%; }
 
 .about {
   position: relative;
