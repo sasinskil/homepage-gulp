@@ -11,15 +11,14 @@
 
 <body>
     <header class="main-header">
-        <button class="navigation-trigger">Menu</button>
-        <nav class="navigation">
+        <button class="navigation-trigger navigation-trigger--js">Menu</button>
+        <nav class="navigation navigation--js">
             <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="">Strona główna</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="">O mnie</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="">Ciekawostki</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="">Kontakt</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#about">O mnie</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#trivia">Ciekawostki</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#contact">Kontakt</a></li>
             </ul>
-            <a href="" class="navigation-hide">X</a>
+            <button class="navigation-hide navigation-hide--js"></button>
         </nav>
     </header>
     <section class="person" id="top">
@@ -28,11 +27,11 @@
         <a class="person__button" href="">O mnie</a>
     </section>
     <main class="main">
-        <section class="about">
+        <section class="about" id="about">
             <h2 class="about__title">O mnie</h2>
             <div class="about__box">
                 <section class="about__who who">
-                    <h3 class="who__title">Kim jest Łukasz ?</h3>
+                    <h3 class="who__title who__title--js"></h3>
                     <div class="who__drawn-arrow"></div>
                 </section>
                 <section class="about__info info">
@@ -46,7 +45,7 @@
                 </section>
             </div>
         </section>
-        <section class="trivia">
+        <section class="trivia" id="trivia">
             <h2 class="trivia__title">Ciekawostki</h2>
             <div class="grid">
                 <section class="section">
@@ -109,25 +108,28 @@
                 </section>
             </div>
         </section>
-        <section class="contact">
-            <h2 class="contact__title">Kontakt</h2>
-            <form class="form">
+        <section class="contact" id="contact">
+            <h2 class="contact__title">Wyślij mi wiadomość</h2>
+            <form class="contact-form">
                 <p>
-                    <label for="">Podaj imię:<br>
-                        <input type="text">
+                    <label class="contact__form--label-name" for="name">Podaj imię:<br>
+                        <input class="contact__form--input-name contact__form--input-name-js" id="name" name="name"
+                            type="text">
                     </label>
                 </p>
                 <p>
-                    <label for="">Podaj adres email:<br>
-                        <input type="email">
+                    <label class="contact__form--label-email" for="email">Podaj adres email:<br>
+                        <input class="contact__form--input-email contact__form--input-email-js" id="email" name="email"
+                            type="email">
                     </label>
                 </p>
                 <p>
-                    <label for="">Twoja wiadomość<br>
-                        <textarea name="" id=""></textarea>
+                    <label class="contact__form--label-message" for="message">Twoja wiadomość<br>
+                        <textarea class="contact__form--input-message contact__form--input-message-js" name="message"
+                            id="message"></textarea>
                     </label>
                 </p>
-                <button type="submit">Wyślij</button>
+                <button class="contact__form--button contact__form--button-js" type="submit">Wyślij</button>
             </form>
         </section>
     </main>
@@ -143,8 +145,7 @@
             </ul>
         </div>
         <p class="footer__info">Strona domowa Łukasz Sasińskiego, wszystkie treści są efektem zaangażowania oraz
-            cięzkiej pracy.<a class="footer__link--top" href="#top"><img class="footer__image"
-                    src="../assets/svg/arrow-up.svg" alt=""></a></p>
+            cięzkiej pracy.<a class="footer__link--top footer__link--top-js" href="#top"></a></p>
     </footer>
     <script src="js/main.js"></script>
 </body>

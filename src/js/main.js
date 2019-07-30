@@ -7,12 +7,12 @@ console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
 const name = 'Łukasz';
 const age = 24;
 
-const aboutHeader = document.querySelector('.about__header--js');
+const whoHeader = document.querySelector('.who__title--js');
 
-//console.log(aboutHeader);
-//console.log(aboutHeader.innerHTML);
+//console.log(whoHeader);
+//console.log(whoHeader.innerHTML);
 
-aboutHeader.innerHTML = `Kim jest ${name} ?`;
+whoHeader.innerHTML = `Kim jest ${name} ?`;
 
 const welcome = (name, age) => {
     if (age < 18) {
@@ -25,53 +25,75 @@ const welcome = (name, age) => {
 welcome(name, age);
 
 
-const button = document.querySelector('.navigation__button--js');
-const navigationList = document.querySelector('.navigation__list--js');
+// const button = document.querySelector('.navigation__button--js');
+// const navigationList = document.querySelector('.navigation__list--js');
 
-button.addEventListener('click', (e) => {
-    navigationList.classList.toggle('navigation__list--visible');
-    if (navigationList.classList.contains('navigation__list--visible')) {
-        button.innerHTML = 'X';
-    } else {
-        button.innerHTML = '☰';
-    }
-});
+// button.addEventListener('click', (e) => {
+//     navigationList.classList.toggle('navigation__list--visible');
+//     if (navigationList.classList.contains('navigation__list--visible')) {
+//         button.innerHTML = 'X';
+//     } else {
+//         button.innerHTML = '☰';
+//     }
+// });
 
-const inputName = document.querySelector('.contact__form--input-name-js');
-const inputEmail = document.querySelector('.contact__form--input-email-js');
-const inputContent = document.querySelector('.contact__form--input-message-js');
+// const inputName = document.querySelector('.contact__form--input-name-js');
+// const inputEmail = document.querySelector('.contact__form--input-email-js');
+// const inputContent = document.querySelector('.contact__form--input-message-js');
 
-const sendMessageBtn = document.querySelector('.contact__form--button-js');
+// const sendMessageBtn = document.querySelector('.contact__form--button-js');
 
-inputName.addEventListener('keyup', (e) => {
-    localStorage.setItem('messageName', e.target.value);
-})
+// inputName.addEventListener('keyup', (e) => {
+//     localStorage.setItem('messageName', e.target.value);
+// })
 
-inputEmail.addEventListener('keyup', (e) => {
-    localStorage.setItem('messageEmail', e.target.value);
-})
+// inputEmail.addEventListener('keyup', (e) => {
+//     localStorage.setItem('messageEmail', e.target.value);
+// })
 
-inputContent.addEventListener('keyup', (e) => {
-    localStorage.setItem('messageContent', e.target.value);
-})
+// inputContent.addEventListener('keyup', (e) => {
+//     localStorage.setItem('messageContent', e.target.value);
+// })
 
-sendMessageBtn.addEventListener('click', (e) => {
-    // localStorage.removeItem('messageName');
-    // localStorage.removeItem('messageEmail');
-    // localStorage.removeItem('messageContent');
+// sendMessageBtn.addEventListener('click', (e) => {
+//     // localStorage.removeItem('messageName');
+//     // localStorage.removeItem('messageEmail');
+//     // localStorage.removeItem('messageContent');
     
-    localStorage.clear();
+//     localStorage.clear();
+// })
+
+
+// if(localStorage.getItem('messageName')) {
+//     inputName.value = localStorage.getItem('messageName');
+// }
+
+// if(localStorage.getItem('messageEmail')) {
+//     inputEmail.value = localStorage.getItem('messageEmail');
+// }
+
+// if(localStorage.getItem('messageContent')) {
+//     inputContent.value = localStorage.getItem('messageContent');
+// }
+
+const navShowBtn = document.querySelector('.navigation-trigger--js');
+const navHideBtn = document.querySelector('.navigation-hide--js');
+const nav = document.querySelector('.navigation--js');
+const toUpLink = document.querySelector('.footer__link--top-js');
+
+navShowBtn.addEventListener('click', (e) => {
+    nav.classList.add('navigation__show');
 })
 
+navHideBtn.addEventListener('click', (e) => {
+    nav.classList.remove('navigation__show');
+})
 
-if(localStorage.getItem('messageName')) {
-    inputName.value = localStorage.getItem('messageName');
-}
-
-if(localStorage.getItem('messageEmail')) {
-    inputEmail.value = localStorage.getItem('messageEmail');
-}
-
-if(localStorage.getItem('messageContent')) {
-    inputContent.value = localStorage.getItem('messageContent');
-}
+document.addEventListener('scroll',(e)=>{
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if(scrollTop > 200) {
+        toUpLink.classList.add('footer__link--top-visible');
+    } else {
+        toUpLink.classList.remove('footer__link--top-visible');
+    }
+  })

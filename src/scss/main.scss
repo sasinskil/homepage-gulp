@@ -63,6 +63,7 @@ body {
   background: none;
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
 }
 
 .navigation {
@@ -74,6 +75,11 @@ body {
   background: rgb(143, 138, 138);
   width: 300px;
   min-height: 100vh;
+  transition: transform 0.5s;
+
+  &__show {
+    transform: translateX(0%);
+  }
 
   &__list {
     margin: 55px 0 0 15px;
@@ -98,11 +104,37 @@ body {
   }
 
   &-hide {
-    text-decoration: none;
+    border: none;
+    background:none;
     color: #fff;
     position: fixed;
-    top: 10px;
-    right: 15px;
+    top: 20px;
+    right: 25px;
+
+    &::before {
+      content:"";
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      width: 3px;
+      height: 20px;
+      background: #fff;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      content:"";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background: #fff;
+      transform: rotate(-45deg);
+
+    }
   }
 }
 
@@ -361,11 +393,45 @@ body {
   }
 
   &__link {
-    text-decoration: none;
+
     &--top {
+      text-decoration: none;
+      display: none;
       position: fixed;
+      background: none;
+      padding: 25px 5px;
       bottom: 40px;
       right: 20px;
+      margin-right: 10px;
+      border-right: 2px solid #857e7e;
+
+      &-visible {
+        display: block;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2px;
+        height: 60%;
+        top: 0;
+        left: 2px;
+        background: #857e7e;
+        transform: rotate(30deg);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2px;
+        height: 60%;
+        top: 0px;
+        left: 18px;
+        background: #857e7e;
+        transform: rotate(-30deg);
+      }
     }
   }
 
