@@ -536,12 +536,13 @@ body {
       height: 100%; }
 
 .about {
+  padding-top: 200px;
   position: relative;
   height: 600px;
   color: #8f8a8a; }
   .about__title {
     position: absolute;
-    top: 10%;
+    top: 20%;
     font-size: 30px;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -650,77 +651,94 @@ body {
     .about .info__link {
       padding-top: 20px;
       text-decoration: none;
-      color: #494545;
+      color: black;
       font-weight: bold; }
       .about__info__link:hover,
       .about .info__link:hover {
-        color: black; }
+        color: #ccc5c5; }
 
-.trivia__title {
-  text-align: center;
-  padding: 40px 0 60px 0; }
-
-.trivia .grid {
-  padding: 32px 16px;
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-column-gap: 90px;
-  grid-row-gap: 40px; }
-
-.trivia .section {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 50px 1fr;
-  grid-template-rows: 50px 1fr;
-  border: 2px solid rgba(143, 138, 138, 0.7);
-  border-radius: 4px;
-  -webkit-transition: -webkit-box-shadow 0.4s;
-  transition: -webkit-box-shadow 0.4s;
-  -o-transition: box-shadow 0.4s;
-  transition: box-shadow 0.4s;
-  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s; }
-  .trivia .section:hover {
-    -webkit-box-shadow: 2px 2px 12px 0px;
-            box-shadow: 2px 2px 12px 0px; }
-  .trivia .section__title {
-    font-size: 17px;
-    background: #fff;
-    padding: 8px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0; }
-  .trivia .section__content {
-    background: url("../assets/images/programming.jpg");
-    padding: 8px 12px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
-  .trivia .section__paragraph {
-    line-height: 20px; }
-  .trivia .section__link {
-    text-decoration: none;
-    color: #8f8a8a;
-    padding: 10px 15px; }
+.trivia {
+  color: #8f8a8a; }
+  .trivia__title {
+    text-align: center;
+    padding: 40px 0 60px 0; }
+    .trivia__title::before {
+      content: "";
+      margin: 110px auto;
+      display: block;
+      width: 80%;
+      height: 2px;
+      background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgba(14, 30, 37, 0)), color-stop(5%, #0e1e25), color-stop(90%, #0e1e25), to(rgba(14, 30, 37, 0)));
+      background-image: -webkit-linear-gradient(right, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
+      background-image: -o-linear-gradient(right, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
+      background-image: linear-gradient(-90deg, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
+      opacity: 0.4; }
+  .trivia .grid {
+    padding: 32px 16px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-column-gap: 90px;
+    grid-row-gap: 40px; }
+  .trivia .section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 50px 1fr;
+    grid-template-rows: 50px 1fr;
+    border: 2px solid #fff;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    -o-transition: transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s; }
+    .trivia .section:hover {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
+    .trivia .section__title {
+      font-size: 17px;
+      background: rgba(143, 138, 138, 0.7);
+      color: #fff;
+      padding: 8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 0; }
+    .trivia .section__content {
+      color: #fff;
+      background: url("../assets/images/programming.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 8px 12px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .trivia .section__paragraph {
+      line-height: 20px; }
+    .trivia .section__link {
+      text-decoration: none;
+      color: #8f8a8a;
+      padding: 10px 15px; }
 
 .contact {
+  padding: 50px 0 80px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -735,21 +753,108 @@ body {
       -ms-flex-align: center;
           align-items: center; }
   .contact__title {
-    font-size: 30px;
     text-align: center;
     width: 100%;
+    background: #8f8a8a;
     color: #fff;
-    height: 200px;
-    background: url("../assets/images/fog.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover; }
+    font-size: 30px;
+    padding: 25px 0;
+    margin: 90px 0; }
+  .contact__form {
+    margin: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .contact__form--label-name {
+      font-weight: bold;
+      color: #8f8a8a; }
+    .contact__form--input-name {
+      margin-top: 10px;
+      width: 300px;
+      height: 40px;
+      text-decoration: none;
+      border: 2px solid #8f8a8a;
+      background: none;
+      padding: 10px; }
+    .contact__form--label-email {
+      font-weight: bold;
+      color: #8f8a8a; }
+    .contact__form--input-email {
+      margin-top: 10px;
+      width: 300px;
+      height: 40px;
+      text-decoration: none;
+      border: 2px solid #8f8a8a;
+      background: none;
+      padding: 10px; }
+    .contact__form--label-message {
+      font-weight: bold;
+      color: #8f8a8a; }
+    .contact__form--input-message {
+      margin-top: 10px;
+      width: 300px;
+      height: 100px;
+      text-decoration: none;
+      border: 2px solid #8f8a8a;
+      background: none;
+      padding: 10px; }
+    .contact__form--button {
+      margin-top: 20px;
+      padding: 12px 45px;
+      background: none;
+      border: none;
+      color: #8f8a8a;
+      border-bottom: 2px solid #8f8a8a;
+      border-right: 2px solid #8f8a8a;
+      position: relative;
+      -webkit-transition: background 0.5s;
+      -o-transition: background 0.5s;
+      transition: background 0.5s; }
+      .contact__form--button:hover {
+        background: rgba(143, 138, 138, 0.1); }
+      .contact__form--button::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: #8f8a8a;
+        -webkit-transition: width 0.6s;
+        -o-transition: width 0.6s;
+        transition: width 0.6s; }
+      .contact__form--button:hover::before {
+        width: 100%; }
+      .contact__form--button::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 0%;
+        background: #8f8a8a;
+        -webkit-transition: height 0.6s;
+        -o-transition: height 0.6s;
+        transition: height 0.6s; }
+      .contact__form--button:hover::after {
+        height: 100%; }
 
 .footer {
   width: 100%;
   height: 300px;
-  background: rgba(143, 138, 138, 0.8);
+  background: #8f8a8a;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -792,6 +897,17 @@ body {
   .footer__image {
     width: 30px;
     height: 30px; }
+  .footer__info::before {
+    content: "";
+    margin: 0 auto 60px auto;
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgba(14, 30, 37, 0)), color-stop(5%, #0e1e25), color-stop(90%, #0e1e25), to(rgba(14, 30, 37, 0)));
+    background-image: -webkit-linear-gradient(right, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
+    background-image: -o-linear-gradient(right, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
+    background-image: linear-gradient(-90deg, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
+    opacity: 0.4; }
   .footer__link--top {
     text-decoration: none;
     display: none;
@@ -828,12 +944,10 @@ body {
       -webkit-transform: rotate(-30deg);
           -ms-transform: rotate(-30deg);
               transform: rotate(-30deg); }
-  .footer__info {
-    border-top: 2px solid rgba(0, 0, 0, 0.548);
-    padding-top: 35px; }
 
 @media screen and (max-width: 700px) {
-  .about__who__drawn-arrow, .about .who__drawn-arrow {
+  .about__who__drawn-arrow,
+  .about .who__drawn-arrow {
     -webkit-animation: moveDown 1s infinite;
             animation: moveDown 1s infinite; } }
 
