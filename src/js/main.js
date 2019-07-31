@@ -12,7 +12,7 @@ const whoHeader = document.querySelector('.who__title--js');
 //console.log(whoHeader);
 //console.log(whoHeader.innerHTML);
 
-whoHeader.innerHTML = `Kim jest ${name} ?`;
+whoHeader.innerHTML += ` ${name} ?`;
 
 const welcome = (name, age) => {
     if (age < 18) {
@@ -37,49 +37,47 @@ welcome(name, age);
 //     }
 // });
 
-// const inputName = document.querySelector('.contact__form--input-name-js');
-// const inputEmail = document.querySelector('.contact__form--input-email-js');
-// const inputContent = document.querySelector('.contact__form--input-message-js');
-
-// const sendMessageBtn = document.querySelector('.contact__form--button-js');
-
-// inputName.addEventListener('keyup', (e) => {
-//     localStorage.setItem('messageName', e.target.value);
-// })
-
-// inputEmail.addEventListener('keyup', (e) => {
-//     localStorage.setItem('messageEmail', e.target.value);
-// })
-
-// inputContent.addEventListener('keyup', (e) => {
-//     localStorage.setItem('messageContent', e.target.value);
-// })
-
-// sendMessageBtn.addEventListener('click', (e) => {
-//     // localStorage.removeItem('messageName');
-//     // localStorage.removeItem('messageEmail');
-//     // localStorage.removeItem('messageContent');
-    
-//     localStorage.clear();
-// })
-
-
-// if(localStorage.getItem('messageName')) {
-//     inputName.value = localStorage.getItem('messageName');
-// }
-
-// if(localStorage.getItem('messageEmail')) {
-//     inputEmail.value = localStorage.getItem('messageEmail');
-// }
-
-// if(localStorage.getItem('messageContent')) {
-//     inputContent.value = localStorage.getItem('messageContent');
-// }
-
+const inputName = document.querySelector('.contact__form--input-name-js');
+const inputEmail = document.querySelector('.contact__form--input-email-js');
+const inputContent = document.querySelector('.contact__form--input-message-js');
+const sendMessageBtn = document.querySelector('.contact__form--button-js');
 const navShowBtn = document.querySelector('.navigation-trigger--js');
 const navHideBtn = document.querySelector('.navigation-hide--js');
 const nav = document.querySelector('.navigation--js');
 const toUpLink = document.querySelector('.footer__link--top-js');
+
+inputName.addEventListener('keyup', (e) => {
+    localStorage.setItem('messageName', e.target.value);
+})
+
+inputEmail.addEventListener('keyup', (e) => {
+    localStorage.setItem('messageEmail', e.target.value);
+})
+
+inputContent.addEventListener('keyup', (e) => {
+    localStorage.setItem('messageContent', e.target.value);
+})
+
+sendMessageBtn.addEventListener('click', (e) => {
+    // localStorage.removeItem('messageName');
+    // localStorage.removeItem('messageEmail');
+    // localStorage.removeItem('messageContent');
+    
+    localStorage.clear();
+})
+
+
+if(localStorage.getItem('messageName')) {
+    inputName.value = localStorage.getItem('messageName');
+}
+
+if(localStorage.getItem('messageEmail')) {
+    inputEmail.value = localStorage.getItem('messageEmail');
+}
+
+if(localStorage.getItem('messageContent')) {
+    inputContent.value = localStorage.getItem('messageContent');
+}
 
 navShowBtn.addEventListener('click', (e) => {
     nav.classList.add('navigation__show');

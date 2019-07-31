@@ -321,7 +321,8 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-color: rgba(143, 138, 138, 0.1); }
 
 @-webkit-keyframes moveRight {
   0% {
@@ -639,8 +640,9 @@ body {
     .about__info__image,
     .about .info__image {
       width: 200px;
-      height: 200px;
-      border-radius: 50%; }
+      height: 230px;
+      border-top-left-radius: 10%;
+      border-bottom-right-radius: 10%; }
     .about__info__paragraph,
     .about .info__paragraph {
       color: #5c5555;
@@ -685,16 +687,16 @@ body {
     display: grid;
     -ms-grid-rows: 50px 1fr;
     grid-template-rows: 50px 1fr;
-    border: 2px solid #fff;
+    border: 2px solid rgba(143, 138, 138, 0.7);
     -webkit-transition: -webkit-transform 0.4s;
     transition: -webkit-transform 0.4s;
     -o-transition: transform 0.4s;
     transition: transform 0.4s;
     transition: transform 0.4s, -webkit-transform 0.4s; }
     .trivia .section:hover {
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1); }
+      -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+              transform: scale(0.9); }
     .trivia .section__title {
       font-size: 17px;
       background: rgba(143, 138, 138, 0.7);
@@ -712,10 +714,6 @@ body {
       margin: 0; }
     .trivia .section__content {
       color: #fff;
-      background: url("../assets/images/programming.jpg");
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
       padding: 8px 12px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -729,13 +727,40 @@ body {
               justify-content: flex-start;
       -webkit-box-align: start;
           -ms-flex-align: start;
-              align-items: flex-start; }
-    .trivia .section__paragraph {
-      line-height: 20px; }
+              align-items: flex-start;
+      min-height: 250px; }
+      .trivia .section__content--begin {
+        background: url("../assets/images/learningCode.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat; }
+      .trivia .section__content--hobbies {
+        background: url("../assets/images/hobbies.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat; }
+      .trivia .section__content--colors {
+        background: url("../assets/images/colors.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat; }
+      .trivia .section__content--activities {
+        background: url("../assets/images/activities.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat; }
+      .trivia .section__content--developer {
+        background: url("../assets/images/programming.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat; }
     .trivia .section__link {
       text-decoration: none;
-      color: #8f8a8a;
-      padding: 10px 15px; }
+      margin: 200px 0 0 120px;
+      font-weight: bold;
+      color: #fff;
+      font-size: 14px;
+      font-style: italic; }
 
 .contact {
   padding: 50px 0 80px 0;
@@ -755,7 +780,10 @@ body {
   .contact__title {
     text-align: center;
     width: 100%;
-    background: #8f8a8a;
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgba(14, 30, 37, 0)), color-stop(40%, #8f8a8a), color-stop(80%, #8f8a8a), to(rgba(14, 30, 37, 0)));
+    background-image: -webkit-linear-gradient(right, rgba(14, 30, 37, 0) 0, #8f8a8a 40%, #8f8a8a 80%, rgba(14, 30, 37, 0) 100%);
+    background-image: -o-linear-gradient(right, rgba(14, 30, 37, 0) 0, #8f8a8a 40%, #8f8a8a 80%, rgba(14, 30, 37, 0) 100%);
+    background-image: linear-gradient(-90deg, rgba(14, 30, 37, 0) 0, #8f8a8a 40%, #8f8a8a 80%, rgba(14, 30, 37, 0) 100%);
     color: #fff;
     font-size: 30px;
     padding: 25px 0;
@@ -813,6 +841,7 @@ body {
       padding: 12px 45px;
       background: none;
       border: none;
+      font-weight: bold;
       color: #8f8a8a;
       border-bottom: 2px solid #8f8a8a;
       border-right: 2px solid #8f8a8a;
@@ -897,17 +926,19 @@ body {
   .footer__image {
     width: 30px;
     height: 30px; }
-  .footer__info::before {
-    content: "";
-    margin: 0 auto 60px auto;
-    display: block;
-    width: 80%;
-    height: 2px;
-    background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgba(14, 30, 37, 0)), color-stop(5%, #0e1e25), color-stop(90%, #0e1e25), to(rgba(14, 30, 37, 0)));
-    background-image: -webkit-linear-gradient(right, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
-    background-image: -o-linear-gradient(right, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
-    background-image: linear-gradient(-90deg, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
-    opacity: 0.4; }
+  .footer__info {
+    padding: 0 10px; }
+    .footer__info::before {
+      content: "";
+      margin: 0 auto 60px auto;
+      display: block;
+      width: 80%;
+      height: 2px;
+      background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgba(14, 30, 37, 0)), color-stop(5%, #0e1e25), color-stop(90%, #0e1e25), to(rgba(14, 30, 37, 0)));
+      background-image: -webkit-linear-gradient(right, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
+      background-image: -o-linear-gradient(right, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
+      background-image: linear-gradient(-90deg, rgba(14, 30, 37, 0) 0, #0e1e25 5%, #0e1e25 90%, rgba(14, 30, 37, 0) 100%);
+      opacity: 0.4; }
   .footer__link--top {
     text-decoration: none;
     display: none;
@@ -949,6 +980,11 @@ body {
   .about__who__drawn-arrow,
   .about .who__drawn-arrow {
     -webkit-animation: moveDown 1s infinite;
-            animation: moveDown 1s infinite; } }
+            animation: moveDown 1s infinite; }
+  .about__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
 /*# sourceMappingURL=main.css.map */

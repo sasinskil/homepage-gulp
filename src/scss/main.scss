@@ -16,6 +16,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
+  background-color: rgba(143, 138, 138, 0.1);
 }
 
 @keyframes moveRight {
@@ -290,8 +291,9 @@ body {
     background: none;
     &__image {
       width: 200px;
-      height: 200px;
-      border-radius: 50%;
+      height: 230px;
+      border-top-left-radius: 10%;
+      border-bottom-right-radius: 10%;
     }
 
     &__paragraph {
@@ -349,11 +351,11 @@ body {
   .section {
     display: grid;
     grid-template-rows: 50px 1fr;
-    border: 2px solid #fff;
+    border: 2px solid rgba(143, 138, 138, 0.7);
     transition: transform 0.4s;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(0.9);
     }
 
     &__title {
@@ -369,25 +371,56 @@ body {
 
     &__content {
       color: #fff;
-      background: url("../assets/images/programming.jpg");
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
       padding: 8px 12px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-    }
+      min-height: 250px;
 
-    &__paragraph {
-      line-height: 20px;
+      &--begin {
+        background: url("../assets/images/learningCode.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      &--hobbies {
+        background: url("../assets/images/hobbies.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      &--colors {
+        background: url("../assets/images/colors.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      &--activities {
+        background: url("../assets/images/activities.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      &--developer {
+        background: url("../assets/images/programming.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
     }
 
     &__link {
       text-decoration: none;
-      color: rgb(143, 138, 138);
-      padding: 10px 15px;
+      margin: 200px 0 0 120px;
+      font-weight: bold;
+      color: #fff;
+      font-size: 14px;
+      font-style: italic;
     }
   }
 }
@@ -402,7 +435,13 @@ body {
   &__title {
     text-align: center;
     width: 100%;
-    background: #8f8a8a;
+    background-image: linear-gradient(
+      -90deg,
+      rgba(14, 30, 37, 0) 0,
+      #8f8a8a 40%,
+      #8f8a8a 80%,
+      rgba(14, 30, 37, 0) 100%
+    );
     color: #fff;
     font-size: 30px;
     padding: 25px 0;
@@ -466,16 +505,17 @@ body {
       padding: 12px 45px;
       background: none;
       border: none;
+      font-weight: bold;
       color: #8f8a8a;
       border-bottom: 2px solid #8f8a8a;
       border-right: 2px solid #8f8a8a;
       position: relative;
       transition: background 0.5s;
-  
+
       &:hover {
         background: rgba(143, 138, 138, 0.1);
       }
-  
+
       &::before {
         content: "";
         position: absolute;
@@ -487,11 +527,11 @@ body {
         background: #8f8a8a;
         transition: width 0.6s;
       }
-  
+
       &:hover::before {
         width: 100%;
       }
-  
+
       &::after {
         content: "";
         position: absolute;
@@ -503,7 +543,7 @@ body {
         background: #8f8a8a;
         transition: height 0.6s;
       }
-  
+
       &:hover::after {
         height: 100%;
       }
@@ -548,6 +588,7 @@ body {
   }
 
   &__info {
+    padding: 0 10px;
     &::before {
       content: "";
       margin: 0 auto 60px auto;
@@ -615,6 +656,10 @@ body {
       &__drawn-arrow {
         animation: moveDown 1s infinite;
       }
+    }
+
+    &__box {
+      flex-direction: column;
     }
   }
 }
