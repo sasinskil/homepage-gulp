@@ -512,7 +512,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #8f8a8a; }
+  color: #545556; }
   .person__title {
     padding-bottom: 50px;
     font-size: 35px; }
@@ -566,7 +566,7 @@ body {
   width: 100%;
   max-width: 900px;
   height: 700px;
-  color: #8f8a8a;
+  color: #545556;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -583,6 +583,7 @@ body {
     height: 100%;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    margin-top: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -590,9 +591,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -660,10 +661,10 @@ body {
     background: none; }
     .about__info__image,
     .about .info__image {
-      width: 200px;
-      height: 230px;
       border-top-left-radius: 10%;
-      border-bottom-right-radius: 10%; }
+      border-bottom-right-radius: 10%;
+      width: 200px;
+      height: 230px; }
     .about__info__paragraph,
     .about .info__paragraph {
       color: #5c5555;
@@ -680,11 +681,11 @@ body {
         color: #5c5555; }
 
 .trivia {
-  color: #8f8a8a;
+  color: #545556;
   font-size: 23px; }
   .trivia__title {
     text-align: center;
-    padding: 40px 0 60px 0; }
+    padding: 160px 0 60px 0; }
     .trivia__title::before {
       content: "";
       margin: 110px auto;
@@ -908,7 +909,7 @@ body {
   width: 100%;
   max-width: 800px; }
   .article__header {
-    color: lightslategrey;
+    color: #545556;
     font-size: 30px;
     margin-bottom: 70px; }
   .article__paragraph {
@@ -1027,7 +1028,7 @@ body {
           -ms-transform: rotate(-30deg);
               transform: rotate(-30deg); }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 640px) {
   .person__title {
     text-align: center; }
   .about__title {

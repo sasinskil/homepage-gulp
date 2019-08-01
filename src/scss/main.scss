@@ -50,7 +50,7 @@ body {
   width: 100%;
   top: 0;
   padding: 16px;
-  background: rgba(143, 138, 138, 0.7);
+  background: $backgroundColor;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -66,7 +66,7 @@ body {
   border: none;
   background: none;
   text-decoration: none;
-  color: #fff;
+  color: $white;
   cursor: pointer;
 }
 
@@ -177,7 +177,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(143, 138, 138);
+  color: $headerColor;
 
   &__title {
     padding-bottom: 50px;
@@ -192,9 +192,7 @@ body {
     text-decoration: none;
     padding: 12px 35px;
     background: none;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
+    @include buttonAppearance(#fff, #fff);
     position: relative;
     transition: background 0.5s;
 
@@ -242,7 +240,7 @@ body {
   width: 100%;
   max-width: 900px;
   height: 700px;
-  color: rgb(143, 138, 138);
+  color: $headerColor;
   display: flex;
   flex-wrap: wrap;
 
@@ -257,9 +255,10 @@ body {
   .who {
     height: 100%;
     flex-basis: 50%;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
     background: none;
@@ -315,10 +314,7 @@ body {
     height: 100%;
     background: none;
     &__image {
-      width: 200px;
-      height: 230px;
-      border-top-left-radius: 10%;
-      border-bottom-right-radius: 10%;
+      @include aboutMePictureShape;
     }
 
     &__paragraph {
@@ -341,12 +337,12 @@ body {
 }
 
 .trivia {
-  color: #8f8a8a;
+  color: $headerColor;
   font-size: 23px;
 
   &__title {
     text-align: center;
-    padding: 40px 0 60px 0;
+    padding: 160px 0 60px 0;
 
     &::before {
       content: "";
@@ -376,7 +372,7 @@ body {
   .section {
     display: flex;
     flex-direction: column;
-    border: 2px solid rgba(143, 138, 138, 0.7);
+    border: 2px solid $backgroundColor;
     transition: transform 0.4s;
 
     &:hover {
@@ -385,7 +381,7 @@ body {
 
     &__title {
       font-size: 17px;
-      background: rgba(143, 138, 138, 0.7);
+      background: $backgroundColor;
       color: #fff;
       padding: 16px;
       text-align: center;
@@ -529,9 +525,7 @@ body {
       background: none;
       border: none;
       font-weight: bold;
-      color: #8f8a8a;
-      border-bottom: 2px solid #8f8a8a;
-      border-right: 2px solid #8f8a8a;
+      @include buttonAppearance(#8f8a8a, #8f8a8a);
       position: relative;
       transition: background 0.5s;
 
@@ -588,7 +582,7 @@ body {
   max-width: 800px;
 
   &__header {
-    color: $lightslategrey;
+    color: $headerColor;
     font-size: 30px;
     margin-bottom: 70px;
   }
@@ -723,7 +717,7 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: $mobile) {
   .person {
     &__title {
       text-align: center;

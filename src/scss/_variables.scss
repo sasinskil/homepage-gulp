@@ -1,24 +1,21 @@
-$bodyBackgroundColor: #FFDEE9;
-$bodyBackgroundLinear: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
-
-$navigationBackground: #87CBAC;
+$backgroundColor: rgba(143, 138, 138, 0.7);
 $white: #fff;
 $lightslategrey: lightslategrey;
-$lightcoral: lightcoral;
+$headerColor: #545556;
 
 $desktop: 1320px;
 $tablet: 840px;
 $mobile: 640px;
 
 @mixin aboutMePictureShape {
-    border-radius: 50%;
-    height: 200px;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
     width: 200px;
+    height: 230px;
 }
 
-@mixin sectionHeaderBeforeShape {
-    border-bottom-left-radius: 50%;
-    border-top-right-radius: 50%;
-    width: 20px;
-    height: 20px;
+@mixin buttonAppearance($textColor, $borderColor) {
+    color: $textColor;
+    border-bottom: 2px solid $borderColor;
+    border-right: 2px solid $borderColor;
 }
