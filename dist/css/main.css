@@ -514,7 +514,8 @@ body {
           align-items: center;
   color: #8f8a8a; }
   .person__title {
-    padding-bottom: 50px; }
+    padding-bottom: 50px;
+    font-size: 35px; }
   .person__citation {
     padding-bottom: 90px; }
   .person__button {
@@ -561,6 +562,7 @@ body {
 
 .about {
   margin: 0 auto;
+  padding: 16px;
   width: 100%;
   max-width: 900px;
   height: 700px;
@@ -599,7 +601,7 @@ body {
     .about__who__title,
     .about .who__title {
       max-width: 120px;
-      line-height: 50px;
+      line-height: 60px;
       text-align: center;
       font-size: 30px; }
     .about__who__drawn-arrow,
@@ -678,7 +680,8 @@ body {
         color: #5c5555; }
 
 .trivia {
-  color: #8f8a8a; }
+  color: #8f8a8a;
+  font-size: 23px; }
   .trivia__title {
     text-align: center;
     padding: 40px 0 60px 0; }
@@ -900,6 +903,7 @@ body {
   background-repeat: no-repeat; }
 
 .article {
+  padding: 16px;
   margin: 70px auto;
   width: 100%;
   max-width: 800px; }
@@ -1024,9 +1028,59 @@ body {
               transform: rotate(-30deg); }
 
 @media screen and (max-width: 700px) {
-  .about__who__drawn-arrow,
-  .about .who__drawn-arrow {
-    -webkit-animation: moveDown 1s infinite;
-            animation: moveDown 1s infinite; } }
+  .person__title {
+    text-align: center; }
+  .about__title {
+    display: none; }
+  .about__who,
+  .about .who {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .about__who__drawn-arrow,
+    .about .who__drawn-arrow {
+      -webkit-animation: moveDown 1s infinite;
+              animation: moveDown 1s infinite;
+      margin: 50px 0 0 0; }
+  .about__info,
+  .about .info {
+    padding: 16px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .about__info__paragraph,
+    .about .info__paragraph {
+      text-align: center; }
+  .trivia__title {
+    margin: 600px 0 60px 0; }
+  .contact__title {
+    font-size: 22px; }
+  .contact__form--input-name {
+    width: 250px;
+    height: 35px; }
+  .contact__form--input-email {
+    width: 250px;
+    height: 35px; }
+  .contact__form--input-message {
+    width: 250px; }
+  .footer {
+    height: 230px; }
+    .footer__info {
+      text-align: center; }
+  .article {
+    margin: 30px auto 60px auto; }
+    .article__picture {
+      width: 300px;
+      display: block; } }
 
 /*# sourceMappingURL=main.css.map */

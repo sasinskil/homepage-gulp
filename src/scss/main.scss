@@ -181,6 +181,7 @@ body {
 
   &__title {
     padding-bottom: 50px;
+    font-size: 35px;
   }
 
   &__citation {
@@ -237,6 +238,7 @@ body {
 
 .about {
   margin: 0 auto;
+  padding: 16px;
   width: 100%;
   max-width: 900px;
   height: 700px;
@@ -264,7 +266,7 @@ body {
 
     &__title {
       max-width: 120px;
-      line-height: 50px;
+      line-height: 60px;
       text-align: center;
       font-size: 30px;
     }
@@ -340,6 +342,7 @@ body {
 
 .trivia {
   color: #8f8a8a;
+  font-size: 23px;
 
   &__title {
     text-align: center;
@@ -579,6 +582,7 @@ body {
 }
 
 .article {
+  padding: 16px;
   margin: 70px auto;
   width: 100%;
   max-width: 800px;
@@ -720,12 +724,84 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  .person {
+    &__title {
+      text-align: center;
+    }
+  }
+
   .about {
+    &__title {
+      display: none;
+    }
+
     &__who,
     .who {
+      flex-basis: 100%;
+      justify-content: center;
+      align-items: center;
+
       &__drawn-arrow {
         animation: moveDown 1s infinite;
+        margin: 50px 0 0 0;
       }
+    }
+
+    &__info,
+    .info {
+      padding: 16px;
+      flex-basis: 100%;
+      justify-content: center;
+      align-items: center;
+
+      &__paragraph {
+        text-align: center;
+      }
+    }
+  }
+
+  .trivia {
+    &__title {
+      margin: 600px 0 60px 0;
+    }
+  }
+
+  .contact {
+    &__title {
+      font-size: 22px;
+    }
+
+    &__form {
+      &--input-name {
+        width: 250px;
+        height: 35px;
+      }
+
+      &--input-email {
+        width: 250px;
+        height: 35px;
+      }
+
+      &--input-message {
+        width: 250px;
+      }
+    }
+  }
+
+  .footer {
+    height: 230px;
+
+    &__info {
+      text-align: center;
+    }
+  }
+
+  .article{
+    margin: 30px auto 60px auto;
+
+    &__picture {
+      width: 300px;
+      display: block;
     }
   }
 }
