@@ -14,3 +14,11 @@ Zapraszam, zobacz na żywo: [Łukasz homepage](https://sasinskil.github.io/homep
 
 Aby ***opublikować*** stronę za pomocą github pages użyj `npm run deploy`
 
+### Wykorzystane technologie
+
+- HTML/HTML5,
+- CSS/SCSS,
+- JavaScript,
+- Gulp,
+- Figma -> [With extension](https://pdkit.co)
+
