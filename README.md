@@ -17,7 +17,7 @@ Aby ***opublikować*** stronę za pomocą github pages użyj `npm run deploy`
 ### Wykorzystane technologie
 
 - HTML/HTML5,
-- CSS/SCSS,
+- SASS,
 - JavaScript,
 - Gulp,
 - Figma -> [With extension](https://pdkit.co)
