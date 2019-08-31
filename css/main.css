@@ -486,12 +486,6 @@ body {
           -ms-transform: rotate(-45deg);
               transform: rotate(-45deg); }
 
-.main {
-  background-image: url("../assets/images/fog-mountain.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
 .person {
   width: 100%;
   height: 650px;
@@ -565,7 +559,6 @@ body {
   padding: 16px;
   width: 100%;
   max-width: 900px;
-  height: 700px;
   color: #545556;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -573,7 +566,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .about__title {
-    padding: 80px 0 20px 0;
+    padding: 80px 0 90px 0;
     text-align: center;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -583,7 +576,6 @@ body {
     height: 100%;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    margin-top: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -601,6 +593,7 @@ body {
     background: none; }
     .about__who__title,
     .about .who__title {
+      margin-top: 0;
       max-width: 120px;
       line-height: 60px;
       text-align: center;
@@ -659,6 +652,9 @@ body {
             align-items: flex-end;
     height: 100%;
     background: none; }
+    .about__info__title,
+    .about .info__title {
+      margin-top: 0; }
     .about__info__image,
     .about .info__image {
       border-top-left-radius: 10%;
@@ -685,7 +681,7 @@ body {
   font-size: 23px; }
   .trivia__title {
     text-align: center;
-    padding: 160px 0 60px 0; }
+    padding: 50px 0 60px 0; }
     .trivia__title::before {
       content: "";
       margin: 110px auto;
@@ -720,7 +716,8 @@ body {
     transition: -webkit-transform 0.4s;
     -o-transition: transform 0.4s;
     transition: transform 0.4s;
-    transition: transform 0.4s, -webkit-transform 0.4s; }
+    transition: transform 0.4s, -webkit-transform 0.4s;
+    position: relative; }
     .trivia .section:hover {
       -webkit-transform: scale(0.98);
           -ms-transform: scale(0.98);
@@ -775,12 +772,11 @@ body {
         background-position: center center;
         background-repeat: no-repeat; }
     .trivia .section__link {
-      text-decoration: none;
-      border-bottom: 1px solid #fff;
-      color: #fff;
-      font-size: 14px;
-      font-style: italic;
-      padding: 0 3px 3px 0; }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
 
 .contact {
   padding: 50px 0 80px 0;
@@ -899,12 +895,6 @@ body {
         transition: height 0.6s; }
       .contact__form--button:hover::after {
         height: 100%; }
-
-.body--article {
-  background-image: url("../assets/images/fog-mountain.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
 
 .article {
   padding: 16px;
@@ -1054,11 +1044,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .about__who__title,
+    .about .who__title {
+      margin-top: 90px; }
     .about__who__drawn-arrow,
     .about .who__drawn-arrow {
       -webkit-animation: moveDown 1s infinite;
               animation: moveDown 1s infinite;
-      margin: 50px 0 0 0; }
+      margin: 50px 0 150px 0; }
   .about__info,
   .about .info {
     padding: 16px;
@@ -1074,7 +1067,7 @@ body {
     .about .info__paragraph {
       text-align: center; }
   .trivia__title {
-    margin: 600px 0 60px 0; }
+    margin: 50px 0 60px 0; }
   .contact__title {
     font-size: 22px; }
   .contact__form--input-name {
