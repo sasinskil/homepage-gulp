@@ -159,13 +159,6 @@ body {
   }
 }
 
-.main {
-  background-image: url("../assets/images/fog-mountain.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .person {
   width: 100%;
   height: 650px;
@@ -239,13 +232,12 @@ body {
   padding: 16px;
   width: 100%;
   max-width: 900px;
-  height: 700px;
   color: $headerColor;
   display: flex;
   flex-wrap: wrap;
 
   &__title {
-    padding: 80px 0 20px 0;
+    padding: 80px 0 90px 0;
     text-align: center;
     flex-basis: 100%;
     font-size: 30px;
@@ -255,7 +247,6 @@ body {
   .who {
     height: 100%;
     flex-basis: 50%;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -264,6 +255,7 @@ body {
     background: none;
 
     &__title {
+      margin-top: 0;
       max-width: 120px;
       line-height: 60px;
       text-align: center;
@@ -313,6 +305,11 @@ body {
     align-items: flex-end;
     height: 100%;
     background: none;
+
+    &__title {
+      margin-top: 0;
+    }
+
     &__image {
       @include aboutMePictureShape;
     }
@@ -342,7 +339,7 @@ body {
 
   &__title {
     text-align: center;
-    padding: 160px 0 60px 0;
+    padding: 50px 0 60px 0;
 
     &::before {
       content: "";
@@ -377,6 +374,7 @@ body {
     flex-direction: column;
     border: 2px solid $backgroundColor;
     transition: transform 0.4s;
+    position: relative;
 
     &:hover {
       transform: scale(0.98);
@@ -437,12 +435,11 @@ body {
     }
 
     &__link {
-      text-decoration: none;
-      border-bottom: 1px solid $white;
-      color: $white;
-      font-size: 14px;
-      font-style: italic;
-      padding: 0 3px 3px 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -569,13 +566,6 @@ body {
       }
     }
   }
-}
-
-.body--article {
-  background-image: url("../assets/images/fog-mountain.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .article {
@@ -747,9 +737,13 @@ body {
       justify-content: center;
       align-items: center;
 
+      &__title {
+        margin-top: 90px;
+      }
+
       &__drawn-arrow {
         animation: moveDown 1s infinite;
-        margin: 50px 0 0 0;
+        margin: 50px 0 150px 0;
       }
     }
 
@@ -768,7 +762,7 @@ body {
 
   .trivia {
     &__title {
-      margin: 600px 0 60px 0;
+      margin: 50px 0 60px 0;
     }
   }
 
